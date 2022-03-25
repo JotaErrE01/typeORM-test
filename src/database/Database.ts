@@ -9,7 +9,7 @@ class Database {
             port: 3306,
             username: "root",
             password: "jotaerre01",
-            database: "test",
+            database: "node",
             // entities: [Photo],
             synchronize: true,
             logging: false,

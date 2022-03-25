@@ -3,12 +3,13 @@ import Database from './database/Database';
 
 // conectar db
 const db = new Database();
-try {
-    db.conectDatabase();
-} catch (error) {
-    console.log(error);
-    console.log('Error al conectar a la base de datos');
-}
+db.conectDatabase()
+    .then(() => {
+        console.log('Database is connected');
+    })
+    .catch(err => {
+        console.log('Error: ', err);
+    })
 
 const server = new Server();
 
