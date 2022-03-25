@@ -2,8 +2,8 @@ import Server from './models/Server';
 import Database from './database/Database';
 
 // conectar db
-const db = new Database();
-db.conectDatabase()
+export const db = new Database().getDb();
+db.initialize()
     .then(() => {
         console.log('Database is connected');
     })

@@ -8,8 +8,8 @@ class Server {
     constructor(){
         this.app = express();
         this.port = process.env.PORT || '8000';
-        // this.app.use(express.json());
-        // this.app.use(express.urlencoded({extended: false}));
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({extended: false}));
         // this.app.use(express.static('public'));
         // this.app.use('/api/v1', require('./routes/index'));
         // this.listen();
